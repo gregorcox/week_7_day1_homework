@@ -2,7 +2,7 @@ public class Visitor {
 
     private int age;
     private double height;
-    private double money;
+    public double money;
 
     public Visitor(int age, double height, double money){
         this.age = age;
@@ -21,4 +21,11 @@ public class Visitor {
     public double getMoney(){
         return money;
     }
+
+    public double buy(double price) {
+        return money -= price;
+    }
+
+
+
 }

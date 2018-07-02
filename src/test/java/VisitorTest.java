@@ -26,4 +26,5 @@ public class VisitorTest {
     public void hasMoney(){
         assertEquals(300, visitor.getMoney(), 0.1);
     }
+
 }

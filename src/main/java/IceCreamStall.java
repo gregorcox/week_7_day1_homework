@@ -11,4 +11,8 @@ public class IceCreamStall extends Stall implements ITicketed {
     public double priceFor(Visitor visitor) {
         return defaultPrice();
     }
+
+    public void sellIceCream(Visitor visitor){
+        visitor.buy(defaultPrice());
+    }
 }

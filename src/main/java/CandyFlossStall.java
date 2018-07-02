@@ -11,4 +11,8 @@ public class CandyFlossStall extends Stall implements ITicketed {
     public double priceFor(Visitor visitor) {
         return defaultPrice();
     }
+
+    public void sellCandyFloss(Visitor visitor) {
+        visitor.buy(defaultPrice());
+    }
 }

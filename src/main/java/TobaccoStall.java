@@ -20,4 +20,10 @@ public class TobaccoStall extends Stall implements ISecurity, ITicketed {
     public double priceFor(Visitor visitor) {
         return defaultPrice();
     }
+
+    public void sellTobacco(Visitor visitor) {
+        if (isAllowedTo(visitor)) {
+            visitor.buy(defaultPrice());
+        }
+    }
 }

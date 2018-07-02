@@ -11,4 +11,10 @@ public class Playground extends Attraction implements ISecurity {
             return false;
         }
     }
+
+    public void allowEntry(Visitor visitor){
+        if (isAllowedTo(visitor)){
+            return;
+        }
+    }
 }

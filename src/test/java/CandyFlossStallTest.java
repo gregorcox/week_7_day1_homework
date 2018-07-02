@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 public class CandyFlossStallTest {
 
     CandyFlossStall candyFlossStall;
+    Visitor visitor;
 
     @Before
     public void before(){
         candyFlossStall = new CandyFlossStall("Candy Floss", "Tony", 2);
+        visitor = new Visitor(20, 200, 5);
     }
 
     @Test
@@ -25,5 +27,11 @@ public class CandyFlossStallTest {
     @Test
     public void hasParkingSpotNumber(){
         assertEquals(2, candyFlossStall.getParkingSpot());
+    }
+
+    @Test
+    public void canSellCandyFloss(){
+        candyFlossStall.sellCandyFloss(visitor);
+        assertEquals(0.80, visitor.getMoney(), 0.01);
     }
 }

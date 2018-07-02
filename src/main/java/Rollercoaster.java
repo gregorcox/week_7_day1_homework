@@ -24,5 +24,11 @@ public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
         }
     }
 
+    public void sellTicket(Visitor visitor){
+        if (isAllowedTo(visitor)) {
+            visitor.buy(priceFor(visitor));
+        }
+    }
+
 
 }
