@@ -9,4 +9,16 @@ public abstract class Stall {
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getOwnerName(){
+        return ownerName;
+    }
+
+    public int getParkingSpot(){
+        return parkingSpot;
+    }
 }
