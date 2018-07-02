@@ -1,4 +1,4 @@
-public class TobaccoStall extends Stall implements ISecurity {
+public class TobaccoStall extends Stall implements ISecurity, ITicketed {
 
     public TobaccoStall(String name, String ownerName, int parkingSpot){
         super(name, ownerName, parkingSpot);
@@ -11,5 +11,13 @@ public class TobaccoStall extends Stall implements ISecurity {
         } else {
             return false;
         }
+    }
+
+    public double defaultPrice() {
+        return 6.60;
+    }
+
+    public double priceFor(Visitor visitor) {
+        return defaultPrice();
     }
 }
