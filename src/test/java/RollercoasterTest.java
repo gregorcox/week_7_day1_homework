@@ -10,7 +10,7 @@ public class RollercoasterTest {
 
     @Before
     public void setup(){
-        rollercoaster = new Rollercoaster("Rollercoaster");
+        rollercoaster = new Rollercoaster("Rollercoaster", 10);
         visitor = new Visitor(30, 180, 20);
     }
 

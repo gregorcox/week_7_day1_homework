@@ -1,7 +1,7 @@
-public class CandyFlossStall extends Stall implements ITicketed {
+public class CandyFlossStall extends Stall implements ITicketed, IReviewed {
 
-    public CandyFlossStall(String name, String ownerName, int parkingSpot){
-        super(name, ownerName, parkingSpot);
+    public CandyFlossStall(String name, String ownerName, int parkingSpot, int rating){
+        super(name, ownerName, parkingSpot, rating);
     }
 
     public double defaultPrice() {
@@ -14,5 +14,9 @@ public class CandyFlossStall extends Stall implements ITicketed {
 
     public void sellCandyFloss(Visitor visitor) {
         visitor.buy(defaultPrice());
+    }
+
+    public int getRating(){
+        return rating;
     }
 }

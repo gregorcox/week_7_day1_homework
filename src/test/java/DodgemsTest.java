@@ -10,7 +10,7 @@ public class DodgemsTest {
 
     @Before
     public void before(){
-        dodgems = new Dodgems("Dodgems");
+        dodgems = new Dodgems("Dodgems", 8);
         visitor = new Visitor(11, 140, 2.50);
     }
 
@@ -23,5 +23,10 @@ public class DodgemsTest {
     public void under12GetsHalfPrice(){
         dodgems.sellTicket(visitor);
         assertEquals(0.25, visitor.getMoney(), 0.01);
+    }
+
+    @Test
+    public void hasRating(){
+        assertEquals(8, dodgems.getRating());
     }
 }

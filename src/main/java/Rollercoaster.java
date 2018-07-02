@@ -1,7 +1,7 @@
 public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
 
-    public Rollercoaster(String name){
-        super(name);
+    public Rollercoaster(String name, int rating){
+        super(name, rating);
     }
 
     public boolean isAllowedTo(Visitor visitor){
@@ -22,6 +22,10 @@ public class Rollercoaster extends Attraction implements ISecurity, ITicketed {
         } else {
             return defaultPrice();
         }
+    }
+
+    public int getRating(){
+        return rating;
     }
 
     public void sellTicket(Visitor visitor){
